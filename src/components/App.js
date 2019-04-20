@@ -1,9 +1,10 @@
 import React from 'react';
+import GamesList from './GamesList';
 
 const App = () => {
     return (
         <div className="container my-5">
-            App component client...
+            <GamesList/>
         </div>
     );
 };
