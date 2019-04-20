@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec babel-node src/server.js"
+    "dev": "NODE_ENV=development nodemon --exec babel-node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,9 @@
   "dependencies": {
     "express": "^4.16.4",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-middleware": "^3.6.2"
   }
 }

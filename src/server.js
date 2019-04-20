@@ -8,6 +8,13 @@ import initialState from './redux/initialState';
 const app = express();
 const port = process.env.PORT || 3000;
 
+if (process.env.NODE_ENV === 'development') {
+    const webpack = require('webpack');
+    const webpackMiddleware = require('webpack-dev-middleware');
+    const webpackConfig = require('../webpack.config.js');
+    app.use(webpackMiddleware(webpack(webpackConfig)));
+}
+
 app.use('/', express.static(path.resolve(__dirname, '../public')));
 
 app.get('/*', async (req, res) => {
