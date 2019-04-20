@@ -1,0 +1,20 @@
+{
+  "name": "speedrun-test-app",
+  "version": "1.0.0",
+  "description": "Speedrun test app (ES6 + SSR + ReactJS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeRojo/speedrun-test-app.git"
+  },
+  "keywords": ["ES6", "SSR", "ReactJS"],
+  "author": "Jorge Rojo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JorgeRojo/speedrun-test-app/issues"
+  },
+  "homepage": "https://github.com/JorgeRojo/speedrun-test-app#readme"
+}
