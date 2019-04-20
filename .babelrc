@@ -1,0 +1,11 @@
+{
+    "presets": [
+        "@babel/env", 
+        [
+            "latest-node",
+            {
+                "target": "8"
+            }
+        ]
+    ]
+}
