@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { Link } from 'react-router-dom';
 
 const GameCard = ({ game, hideButton }) => {
     return (
@@ -9,7 +10,7 @@ const GameCard = ({ game, hideButton }) => {
             <div className="card-body">
                 <h2 className="card-title h5">{game.name}</h2>
                 {!hideButton &&
-                    <a href={game.id} className="btn btn-primary d-block"> show run </a>
+                    <Link to={game.id} className="btn btn-primary d-block"> show run </Link>
                 }
             </div>
         </div>
