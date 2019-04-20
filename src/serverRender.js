@@ -11,7 +11,7 @@ const render = async (req, initialState) => {
     const store = configureStore(initialState);
 
     // load games
-    // await store.dispatch(getGames());
+    await store.dispatch(getGames());
 
     const content = renderToString(
         <Provider store={store} >
