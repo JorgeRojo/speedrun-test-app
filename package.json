@@ -4,17 +4,37 @@
   "description": "Speedrun test app (ES6 + SSR + ReactJS)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JorgeRojo/speedrun-test-app.git"
   },
-  "keywords": ["ES6", "SSR", "ReactJS"],
+  "keywords": [
+    "ES6",
+    "SSR",
+    "ReactJS"
+  ],
   "author": "Jorge Rojo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JorgeRojo/speedrun-test-app/issues"
   },
-  "homepage": "https://github.com/JorgeRojo/speedrun-test-app#readme"
+  "homepage": "https://github.com/JorgeRojo/speedrun-test-app#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-latest-node": "^3.1.1",
+    "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
