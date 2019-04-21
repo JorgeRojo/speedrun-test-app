@@ -14,7 +14,7 @@ const PageTemplate = ({ state, title, content }) => {
         <body class="bg-light">
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div id="app">${content}</div>  
-            <script> window.__STATE__=${JSON.stringify(state, null, 2)}; </script>
+            <script> window.__STATE__=${JSON.stringify(state)}; </script>
             <script src="bundle.js"></script>
         </body>
         </html> 
