@@ -4,7 +4,7 @@ import GoBackBtb from '../GoBackBtb';
 import VideoBtn from './VideoBtn';
 import TimeDisplay from './TimeDisplay';
 
-const RunScreen = ({ run }) => {
+const RunScreen = ({ run, player }) => {
 
     const { id, videoLink, time } = run;
 
@@ -12,7 +12,7 @@ const RunScreen = ({ run }) => {
         <>
             <GoBackBtb />
             <VideoBtn videoLink={videoLink} />
-            <Title>{id}</Title>
+            <Title>Player: {player.name}</Title>
             <TimeDisplay time={time} />
         </>
     );
