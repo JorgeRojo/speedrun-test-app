@@ -1,8 +1,6 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
-    devtool: 'sourcemap',
     entry: { 
         bundle: './src/clientRender.js'
     },

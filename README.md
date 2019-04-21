@@ -11,3 +11,8 @@ Speedrun test app (ES6 + SSR + ReactJS)
 ## Launch in dev mode
 
 - `yarn dev`
+
+## Build and launch
+
+- `npm run build`
+- `npm start`

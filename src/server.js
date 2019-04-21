@@ -12,7 +12,11 @@ if (process.env.NODE_ENV === 'development') {
     const webpack = require('webpack');
     const webpackMiddleware = require('webpack-dev-middleware');
     const webpackConfig = require('../webpack.config.js');
-    app.use(webpackMiddleware(webpack(webpackConfig)));
+    app.use(webpackMiddleware(webpack({
+        ...webpackConfig,
+        mode: process.env.NODE_ENV, 
+        devtool: 'source-map',
+    })));
 }
 
 app.use('/', express.static(path.resolve(__dirname, '../public')));
