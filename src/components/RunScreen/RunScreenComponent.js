@@ -8,7 +8,6 @@ import Alert from '../Alert';
 import Loading from '../Loading';
 import RunScreen from './RunScreen';
 
-
 const RunScreenComponent = ({ isFetching, fetchError, match, run, getRuns }) => {
 
     const gameId = parseRouteGameId(match);
