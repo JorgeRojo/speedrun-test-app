@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from './Title';
+import Title from '../Title';
 import GameCard from './GameCard';
 
 const GamesList = ({ gamesList }) => (
