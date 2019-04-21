@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getGames } from '../../redux/entities/games/actions';
 
-import GamesList from './GamesList';
+import Alert from '../Alert';
 import Loading from '../Loading';
+import GamesList from './GamesList';
 
 
 const GamesListContainer = ({ isFetching, fetchError, gamesList, getGames }) => {
@@ -14,7 +15,7 @@ const GamesListContainer = ({ isFetching, fetchError, gamesList, getGames }) => 
     }, []);
 
     if (fetchError) {
-        return (<p className="alert alert-danger">Error getting data!</p>);
+        return ( <Alert>Error getting data!</Alert>);
     }
 
     if (isFetching) {

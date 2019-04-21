@@ -9,6 +9,10 @@ import RunScreen from '../RunScreen';
 
 const AppContainer = ({ gamesList }) => {
 
+    useEffect(() => {
+        getGames();
+    }, []);
+
     const routes = [
         {
             path: '/',
@@ -24,10 +28,6 @@ const AppContainer = ({ gamesList }) => {
             component: NotFound
         }
     ];
-
-    useEffect(() => {
-        getGames();
-    }, []);
 
     return (<App routes={routes} />);
 }
