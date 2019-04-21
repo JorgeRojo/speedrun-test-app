@@ -1,32 +1,31 @@
 import get from 'lodash.get';
-import { REQUEST_RUNS, RECEIVE_RUNS, ROLLBACK_RUNS } from './actions';
+import { REQUEST_PLAYERS, RECEIVE_PLAYERS, ROLLBACK_PLAYERS } from './actions';
 import initialState from '../../initialState';
 
-export default function runs(state = initialState.entities.runs, action) {
+export default function runs(state = initialState.entities.players, action) {
     const { type, payload } = action;
 
     switch (type) {
-        case REQUEST_RUNS:
+        case REQUEST_PLAYERS:
             return ({
                 ...state,
                 isFetching: true,
                 fetchError: false,
             });
-        case RECEIVE_RUNS:
+        case RECEIVE_PLAYERS: 
             return ({
                 data: [
                     ...state.data,
-                    ...payload.map(run => ({
-                        id: run.id,
-                        gameId: run.game,
-                        videoLink: get(run, 'videos.links[0].uri'),
-                        time: get(run , 'times.primary_t'),
-                        playerUri: get(run, 'players[0].uri'),
+                    ...payload.map(player => ({
+                        name: get(player, 'name') || get(player, 'names.international'),
+                        uri: player.links.reduce((uri, link) => (
+                            link.rel === 'self' ? link.uri : uri
+                        ), undefined)
                     })),
                 ],
                 isFetching: false,
             });
-        case ROLLBACK_RUNS:
+        case ROLLBACK_PLAYERS:
             return ({
                 data: [
                     ...state.data,

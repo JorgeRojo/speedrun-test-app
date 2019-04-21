@@ -23,7 +23,7 @@ const fetchGames = () => async (dispatch, getState) => {
     dispatch(requestGames());
 
     try {
-        const response = await fetch(`https://www.speedrun.com/api/v1/games?offset=0&max=9`);
+        const response = await fetch(`https://www.speedrun.com/api/v1/games?offset=0`);
         const { data } = await response.json();
         return dispatch(receiveGames(data));
     }
