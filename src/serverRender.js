@@ -24,7 +24,7 @@ const render = async (req, initialState) => {
         await store.dispatch(getRuns(gameId));
         run = runGameSelector(store.getState(), gameId)(); 
     }
-
+    
     // load player
     if (run && run.playerUri) {
         await store.dispatch(getPlayer(run.playerUri)); 
