@@ -17,3 +17,8 @@ export const playerByUri = (state, uri) => {
     const { data } = state.entities.players;
     return data.find(player => player.uri === uri);
 };
+
+export const gameSelector = (state, gameId) => createSelector(
+    () => state.entities.games,
+    games => games.data.find(game => game.id === gameId)
+);
