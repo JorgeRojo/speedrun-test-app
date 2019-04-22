@@ -2,7 +2,7 @@ import get from 'lodash.get';
 import { REQUEST_PLAYERS, RECEIVE_PLAYERS, ROLLBACK_PLAYERS } from './actions';
 import initialState from '../../initialState';
 
-export default function runs(state = initialState.entities.players, action) {
+export default function players(state = initialState.entities.players, action) {
     const { type, payload } = action;
 
     switch (type) {
