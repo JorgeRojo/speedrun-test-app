@@ -20,3 +20,8 @@ hydrate((
         </BrowserRouter>
     </Provider>
 ), document.querySelector('#app'));
+
+
+if (window.Cypress) {
+    window.reduxStore = store;
+}
