@@ -16,3 +16,11 @@ Speedrun test app (ES6 + SSR + ReactJS)
 
 - `npm run build`
 - `npm start`
+
+## Run cypress tests
+
+- `npm run build`
+- run only from terminal: `npm run test`
+- run opening browser: `npm run test:open` 
+  - -> cypress window opens
+  - -> click on "Run all spects"

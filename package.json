@@ -2,7 +2,7 @@
   "name": "speedrun-test-app",
   "version": "1.0.0",
   "description": "Speedrun test app (ES6 + SSR + ReactJS)",
-  "main": "index.js",
+  "main": " build/index.js",
   "scripts": {
     "test": "start-server-and-test start http://localhost:3000 cy:run",
     "test:open": "start-server-and-test start http://localhost:3000 cy:open",
