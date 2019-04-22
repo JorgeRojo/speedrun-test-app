@@ -24,3 +24,7 @@ Speedrun test app (ES6 + SSR + ReactJS)
 - run opening browser: `npm run test:open` 
   - -> cypress window opens
   - -> click on "Run all spects"
+
+## Note
+
+- leave port 3000 free
