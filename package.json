@@ -4,7 +4,10 @@
   "description": "Speedrun test app (ES6 + SSR + ReactJS)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "start-server-and-test start http://localhost:3000 cy:run",
+    "test:open": "start-server-and-test start http://localhost:3000 cy:open",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
     "dev": "NODE_ENV=development nodemon --exec babel-node src/server.js",
     "webpack": "webpack --config webpack.config.js --mode production",
     "babel": "NODE_ENV=production babel src --out-dir build",
@@ -35,7 +38,9 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "babel-preset-latest-node": "^3.1.1",
-    "nodemon": "^1.18.11"
+    "cypress": "^3.2.0",
+    "nodemon": "^1.18.11",
+    "start-server-and-test": "^1.7.13"
   },
   "dependencies": {
     "express": "^4.16.4",
