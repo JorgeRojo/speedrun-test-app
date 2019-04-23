@@ -16,12 +16,12 @@ export default function runs(state = initialState.entities.runs, action) {
             return ({
                 data: [
                     ...state.data,
-                    ...payload.map(run => ({
-                        id: run.id,
-                        gameId: run.game,
-                        videoLink: get(run, 'videos.links[0].uri'),
-                        time: get(run , 'times.primary_t'),
-                        playerUri: get(run, 'players[0].uri'),
+                    ...payload.map(record => ({
+                        id: get(record, 'runs[0].run.id'),
+                        gameId: get(record, 'runs[0].run.game'),
+                        videoLink: get(record, 'runs[0].run.videos.links[0].uri'),
+                        time: get(record , 'runs[0].run.times.primary_t'),
+                        playerUri: get(record, 'runs[0].run.players[0].uri'),
                     })),
                 ],
                 isFetching: false,
