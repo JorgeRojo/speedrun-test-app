@@ -10,7 +10,7 @@ const GameCard = ({ game, hideButton }) => {
             <div className="card-body">
                 <h2 className="card-title h5">{game.name}</h2>
                 {!hideButton &&
-                    <Link to={game.id} className="btn btn-primary d-block"> show run </Link>
+                    <Link to={game.id} className="btn btn-primary d-block"> show record </Link>
                 }
             </div>
         </div>
