@@ -23,8 +23,8 @@ const fetchRuns = (gameId) => async (dispatch, getState) => {
     dispatch(requestRuns());
 
     try {
-        const response = await fetch(`https://www.speedrun.com/api/v1/runs?game=${gameId}&max=1`);
-        const { data } = await response.json(); 
+        const response = await fetch(`https://www.speedrun.com/api/v1/games/${gameId}/records`);
+        const { data } = await response.json();  
         return dispatch(receiveRuns(data));
     }
     catch (e) {
