@@ -19,7 +19,7 @@ export default function games(state = initialState.entities.games, action) {
                     ...payload.map(game => ({
                         id: game.id,
                         name: get(game, 'names.twitch') || get(game, 'names.international'),
-                        logoUri: get(game, 'assets.logo.uri'),
+                        logoUri: get(game, 'assets.cover-medium.uri'),
                     })),
                 ],
                 isFetching: false,
